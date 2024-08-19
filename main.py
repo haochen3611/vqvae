@@ -46,8 +46,14 @@ training_data, validation_data, training_loader, validation_loader, x_train_var 
 Set up VQ-VAE model with components defined in ./models/ folder
 """
 
-model = VQVAE(args.n_hiddens, args.n_residual_hiddens,
-              args.n_residual_layers, args.n_embeddings, args.embedding_dim, args.beta).to(device)
+model = VQVAE(
+    args.n_hiddens, 
+    args.n_residual_hiddens, 
+    args.n_residual_layers, 
+    args.n_embeddings, 
+    args.embedding_dim, 
+    args.beta
+).to(device)
 
 """
 Set up optimizer and training loop
